@@ -18,6 +18,11 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/myShop", {
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
+
+app.use("/api/users", userRouter);
+app.use("/api/products", productRouter);
+app.use("/api/orders", orderRouter);
+
 /**
  * Send back PAYPAL_CLIENT_ID to the frontend by the
  * api below
@@ -45,10 +50,6 @@ app.get("/api/products/:id", (req, res) => {
   }
 });
 */
-
-app.use("/api/users", userRouter);
-app.use("/api/products", productRouter);
-app.use("/api/orders", orderRouter);
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
