@@ -18,6 +18,14 @@ mongoose.connect(process.env.MONGODB_URL || "mongodb://localhost/myShop", {
   useUnifiedTopology: true,
   useCreateIndex: true,
 });
+/**
+ * Send back PAYPAL_CLIENT_ID to the frontend by the
+ * api below
+ */
+
+app.get("/api/config/paypal", (req, res) => {
+  res.send(process.env.PAYPAL_CLIENT_ID || "sb");
+});
 
 app.get("/", (req, res) => {
   res.send("server is ready");
