@@ -1,0 +1,3 @@
+[submodule "myShop_submodule"]
+	path = myShop_submodule
+	url = https://github.com/Abdi-github/myShop_submodule
