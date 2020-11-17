@@ -25,7 +25,5 @@ yarn-error.log*
 package-lock.json
 .env
 
-# module change
-/test
-/frontend
+
 
