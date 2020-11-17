@@ -26,6 +26,6 @@ package-lock.json
 .env
 
 # module change
-/check
+check/
 /frontend
 
